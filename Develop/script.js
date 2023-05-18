@@ -47,20 +47,34 @@ function generatePassword() {
   passwordCharacters = [];
 
   if (includeUppercase) {
-    passwordCharacters = uppercaseLetters.concat()
+    passwordCharacters = passwordCharacters.concat(uppercaseLetters)
+    console.log(passwordCharacters)
   };
+  // if (includeLowercase) {
+  //   passwordCharacters = passwordCharacters.concat(lowercaseLetters)
+  // };
+  // if (includeNum) {
+  //   passwordCharacters = passwordCharacters.concat(numbers)
+  // };
+  // if (includeSymbol) {
+  //   passwordCharacters = passwordCharacters.concat(symbols)
+  // };
+
+  // console.log(passwordCharacters)
 };
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+generatePassword();
 
-  passwordText.value = password;
+// // function writePassword() {
+// //   var password = generatePassword();
+// //   var passwordText = document.querySelector("#password");
 
-}
+// //   passwordText.value = password;
+
+// }
 
 
 
 // Add event listener to generate button
 // EVENT LISTENER
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
