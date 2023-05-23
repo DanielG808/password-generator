@@ -36,7 +36,7 @@ function generatePassword() {
   // check that character input is within set range
   if ((charAmount < 8) || (charAmount > 128)) {
     console.log("nope!");
-    alert("Only character counts between 8 and 128 characters will be accepted! Pleas try again.");
+    alert("Only character counts between 8 and 128 characters will be accepted! Please try again.");
     generatePassword();
   } else {
 
