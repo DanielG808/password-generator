@@ -31,15 +31,23 @@ function generatePassword() {
   
   // how long
   var charAmount = Number(prompt("Select a character count between 8 and 128: "));
-  // ask the user what characters to use
+  
+
+  // check that character input is within set range
+  if ((charAmount < 8) || (charAmount > 128)) {
+    console.log("nope!");
+    alert("Only character counts between 8 and 128 characters will be accepted! Pleas try again.");
+    generatePassword();
+  } else {
+
+    // ask the user what characters to use
   var includeUppercase = confirm("Do you want to include uppercase characters?");
   var includeLowercase = confirm("Do you want to include lowercase characters?");
   var includeNum = confirm("Do you want to include number characters?");
   var includeSymbol = confirm("Do you want to include symbol characters?");
 
-  passwordCharacters = [];
+    passwordCharacters = [];
 
-  // put all the chosen characters in to a list
   if (includeUppercase) {
     passwordCharacters = passwordCharacters.concat(uppercaseLetters)
   };
@@ -63,6 +71,9 @@ function generatePassword() {
     password = password + passwordCharacters[randomIndex]
   }
   return password;
+  }
+  // put all the chosen characters in to a list
+  
 };
 
 function writePassword() {
